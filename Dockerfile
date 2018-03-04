@@ -17,6 +17,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN adduser --disabled-password --gecos '' $USER_NAME
 USER $USER_NAME
-WORKDIR $HOME/.digitalnote/
+WORKDIR /home/$USER_NAME/.digitalnote/
 
 CMD ["digitalnotewallet"]
