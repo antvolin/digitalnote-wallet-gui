@@ -14,8 +14,6 @@ RUN apt-get update && apt-get install -y \
 	libqt5network5 \
 	libqt5widgets5 && \
 	dpkg -i digitalnotewallet-1.0.13-beta-136.amd64.deb && \
-	apt-get -y autoremove && \
-	apt-get -y clean && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN adduser --disabled-password --gecos '' $USER_NAME
