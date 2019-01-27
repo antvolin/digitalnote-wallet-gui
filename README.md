@@ -12,7 +12,7 @@ Folder with wallet data will be created in the location - "{HOME FOLDER YOUR USE
   
     mkdir -p $HOME/digitalnote-data/data && \
     mkdir -p $HOME/digitalnote-data/wallets && \
-    docker run -d --device /dev/dri \
+    docker run --net=host -d --device /dev/dri \
     -e DISPLAY=unix$DISPLAY \
     -v $HOME/digitalnote-data/data/:$HOME/.digitalnote/ \
     -v $HOME/digitalnote-data/wallets/:$HOME/wallets/ \
